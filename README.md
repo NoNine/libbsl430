@@ -2,15 +2,16 @@ libbsl430
 ---------
 A MSP430 BSL protocol ('5xx, 6xx' UART) host side implementation.
 
-It is verified with MSP430FR2x33 and the UART is used as the
+It is verified with MSP430FR2x33 and the UART is used as the<br />
 communication interface.
 
-SLAU610A: MSP430FR4xx and MSP430FR2xx Bootloader (BSL)
+SLAU610A: MSP430FR4xx and MSP430FR2xx Bootloader (BSL)<br />
 SLAU319K: MSP430 Programming With the Bootloader (BSL)
 
 
 Code Structure
 --------------
+```
 libbsl430/
 +-- Android.mk           Makefile following Android build system.
 +-- bsl430.c             BSL protocol core commands implementation.
@@ -21,16 +22,19 @@ libbsl430/
 +-- bsl430-program.h
 +-- bsl430_test.c        The test code parses a TI-TXT file and programs it.
 +-- README
+```
 
 
 How to Port the library
 -----------------------
-All the platform specific codes are in bellow two files.
+All the platform specific codes are in bellow two files.<br />
 You can create your own ones.
+
     bsl430-platform.h
     bsl430-platform.c
 
 Below Macros and APIs are needed to be implemented to support the library.
+
     log(...)
     debug(...)
     mdelay(a)
@@ -49,8 +53,9 @@ Below Macros and APIs are needed to be implemented to support the library.
 
 How to Run the Test
 -------------------
-1) Port the library to your platform and pass the build.
+1) Port the library to your platform and pass the build.<br />
 2) bsl430_test can be run in below form.
+
     $ bsl430_test <TI-TXT File>
 
     Below is an example console output which shows the programing process.
