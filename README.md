@@ -60,6 +60,7 @@ How to Run the Test
 
     Below is an example console output which shows the programing process.
 
+    ```
     bsl430_test: File size: 45216 Byte.
     bsl430: Change baudrate to 115200.
     bsl430-program: ** Password Error! All code FRAM is erased!
@@ -140,4 +141,5 @@ How to Run the Test
     bsl430: RX_DATA: @FFFE   2 Bytes
     bsl430-program:
     bsl430-program: BSL programming SUCC.
+    ```
 
